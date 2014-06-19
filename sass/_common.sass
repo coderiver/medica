@@ -47,12 +47,15 @@ body
 
 +font(BrandonGrotesque-Medium, BrandonGrotesque-Medium)
 +font(BrandonGrotesque-Black, BrandonGrotesque-Black)
++font(BrandonGrotesque-Regular, BrandonGrotesque-Regular)
 // common blocks      
 //HEADER
 header
-	position: relative
-	min-width: 1115px
-	height: 70px
+	width: 100%
+	min-width: 1115px	
+	height: 70px	
+	position: fixed
+	z-index: 1
 	background: #5bcce1
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif 
 
@@ -131,7 +134,7 @@ header
 	
 .home__text
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif
-	padding-top: 143px
+	padding-top: 200px
 	margin: 0 auto 80px
 	width: 940px
 	img
@@ -151,7 +154,10 @@ header
 	a
 		cursor: pointer
 		background: url(../img/dot1.png) no-repeat
-		padding-right: 20px
+		display: inline-block
+		width: 11px
+		height: 11px
+		margin: 0 3px
 		&.active
 			background: url(../img/dot2.png) no-repeat
 
@@ -177,5 +183,55 @@ header
 		width: 14px
 		height: 9px
 		background: url(../img/arrow.png) no-repeat
+		left: 50%
+		margin: 15px 0 0 -7px
+
+//SECTION BRANDS
+.brands
+	position: relative
+
+.brands__text
+	font-family: "BrandonGrotesque-Regular", Arial, sans-serif
+	height: 830px
+	text-align: center  
+	padding-top: 108px 
+	.title
+		color: #5bcce1
+		font-size: 48px
+	p
+		color: #555555
+		font-size: 24px    
+	table
+		width: 1000px
+		border: 0
+		margin: 0 auto
+		margin-top: 100px
+		td
+			padding-bottom: 100px  
+		a
+			font-size: 18px
+			text-decoration: none 
+			text-transform: uppercase 
+			color: #555
+			span
+				display: block 
+				
+.brands__scroll
+	position: absolute
+	left: 50%
+	bottom: 50px
+	margin-left: -55px
+	a
+		font: 14px "BrandonGrotesque-Black", Arial, sans-serif
+		text-transform: uppercase 
+		text-decoration: none 
+		color: #5bcce1
+		bottom: 50px
+	&:after
+		content: ""
+		position: absolute
+		width: 14px
+		height: 9px
+		background: url(../img/arrow2.png) no-repeat
 		left: 50%
 		margin: 15px 0 0 -7px
