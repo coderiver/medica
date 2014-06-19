@@ -48,7 +48,7 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .header__auth .menu i { background: url(../img/menu_i.png) no-repeat; position: absolute; width: 26px; height: 15px; top: 11px; right: -40px; cursor: pointer; }
 .header__auth .search i { background: url(../img/search_i.png) no-repeat; position: absolute; width: 20px; height: 19px; top: 9px; right: -73px; cursor: pointer; }
 
-.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; }
+.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; min-width: 1115px; }
 
 .home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-top: 200px; margin: 0 auto 80px; width: 940px; }
 .home__text img { position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
@@ -64,9 +64,9 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .home__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: white; bottom: 50px; }
 .home__scroll:after { content: ""; position: absolute; width: 14px; height: 9px; background: url(../img/arrow.png) no-repeat; left: 50%; margin: 15px 0 0 -7px; }
 
-.brands { position: relative; }
+.brands { position: relative; height: 830px; min-width: 1115px; }
 
-.brands__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; height: 830px; text-align: center; padding-top: 108px; }
+.brands__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding-top: 108px; }
 .brands__text .title { color: #5bcce1; font-size: 48px; }
 .brands__text p { color: #555555; font-size: 24px; }
 .brands__text table { width: 1000px; border: 0; margin: 0 auto; margin-top: 100px; }
@@ -77,6 +77,26 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .brands__scroll { position: absolute; left: 50%; bottom: 50px; margin-left: -55px; }
 .brands__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: #5bcce1; bottom: 50px; }
 .brands__scroll:after { content: ""; position: absolute; width: 14px; height: 9px; background: url(../img/arrow2.png) no-repeat; left: 50%; margin: 15px 0 0 -7px; }
+
+.account { position: relative; background: #5bcce1; height: 830px; min-width: 1115px; }
+
+.account__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding-top: 108px; color: white; }
+.account__text .title { font-size: 48px; }
+.account__text p { font-size: 24px; }
+
+.account__fieldset { text-align: center; color: black; padding-top: 50px; }
+.account__fieldset input { width: 300px; height: 50px; margin: 0 20px 20px 0; padding-left: 20px; }
+
+.account__create { margin-top: 30px; position: relative; background: none; border: 2px solid white; width: 320px; height: 50px; text-transform: uppercase; color: white; }
+.account__create:after { content: ""; background: url(../img/arrow3.png) no-repeat; position: absolute; width: 9px; height: 14px; right: 20px; }
+
+.account__menu { position: absolute; bottom: 25px; left: 115px; }
+.account__menu li { float: left; padding-right: 15px; }
+.account__menu li:hover a { text-decoration: none; }
+.account__menu li a { color: white; }
+
+footer { height: 50px; text-align: center; }
+footer a { display: inline-block; margin: 10px 5px 0 0; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

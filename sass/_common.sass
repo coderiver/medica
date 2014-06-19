@@ -130,7 +130,8 @@ header
 .home
 	position: relative
 	background: url(../img/bg-1.png) no-repeat
-	height: 830px 
+	height: 830px
+	min-width: 1115px 
 	
 .home__text
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif
@@ -189,10 +190,11 @@ header
 //SECTION BRANDS
 .brands
 	position: relative
+	height: 830px
+	min-width: 1115px
 
 .brands__text
-	font-family: "BrandonGrotesque-Regular", Arial, sans-serif
-	height: 830px
+	font-family: "BrandonGrotesque-Regular", Arial, sans-serif	
 	text-align: center  
 	padding-top: 108px 
 	.title
@@ -235,3 +237,67 @@ header
 		background: url(../img/arrow2.png) no-repeat
 		left: 50%
 		margin: 15px 0 0 -7px
+		
+//SECTION ACCOUNT
+.account
+	position: relative
+	background: #5bcce1
+	height: 830px
+	min-width: 1115px
+	
+.account__text
+	font-family: "BrandonGrotesque-Regular", Arial, sans-serif	
+	text-align: center  
+	padding-top: 108px
+	color: #FFF 
+	.title
+		font-size: 48px
+	p
+		font-size: 24px
+		
+.account__fieldset
+	text-align: center
+	color: #000
+	padding-top: 50px
+	input
+		width: 300px
+		height: 50px
+		margin: 0 20px 20px 0   
+		padding-left: 20px
+
+.account__create
+	margin-top: 30px
+	position: relative
+	background: none
+	border: 2px solid #fff
+	width: 320px
+	height: 50px
+	text-transform: uppercase
+	color: #fff
+	&:after
+		content: ""
+		background: url(../img/arrow3.png) no-repeat
+		position: absolute
+		width: 9px
+		height: 14px
+		right: 20px 
+
+.account__menu 
+	position: absolute
+	bottom: 25px
+	left: 115px
+	li 
+		float: left
+		padding-right: 15px
+		&:hover a
+			text-decoration: none 
+		a
+			color: #FFF 
+
+//FOOTER
+footer
+	height: 50px
+	text-align: center
+	a
+		display: inline-block
+		margin: 10px 5px 0 0 
