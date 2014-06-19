@@ -45,5 +45,137 @@ body
 	font-size: 12px 
 	line-height: 1.4
 
-
++font(BrandonGrotesque-Medium, BrandonGrotesque-Medium)
++font(BrandonGrotesque-Black, BrandonGrotesque-Black)
 // common blocks      
+//HEADER
+header
+	position: relative
+	min-width: 1115px
+	height: 70px
+	background: #5bcce1
+	font-family: "BrandonGrotesque-Medium", Arial, sans-serif 
+
+.header__left
+	position: absolute
+
+.header__logo
+	position: absolute
+	top: 18px
+	left: 28px  
+	
+.header__menu
+	position: relative
+	top: 23px
+	left: 195px
+	font-size: 18px 
+	li
+		display: inline-block
+		padding-right: 16px
+		a
+			color: #FFF
+			text-decoration: none 
+			
+.header__phone
+	float: left
+	margin: 19px 0 0 240px
+	color: #FFF
+	font-size: 24px
+	position: absolute
+	left: 50%
+	margin: 20px 0 0 -83px
+
+.header__right
+	position: absolute
+	right: 90px
+	top: 17px
+			
+.header__auth
+	input
+		width: 228px
+		height: 33px
+		padding: 0 0 0 20px
+		background: none
+		font-size: 16px
+		border: 2px solid #fff
+		color: white
+		+placeholder-color(#fff)
+		&:focus
+			box-shadow: 0 0 0 1px #dff6fd
+			border-color: #dff6fd
+	.menu
+		i
+			background: url(../img/menu_i.png) no-repeat
+			position: absolute
+			width: 26px
+			height: 15px
+			top: 11px
+			right: -40px
+			cursor: pointer
+	.search
+		i
+			background: url(../img/search_i.png) no-repeat
+			position: absolute
+			width: 20px
+			height: 19px
+			top: 9px
+			right: -73px
+			cursor: pointer
+
+
+//SECTION HOME
+.home
+	position: relative
+	background: url(../img/bg-1.png) no-repeat
+	height: 830px 
+	
+.home__text
+	font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+	padding-top: 143px
+	margin: 0 auto 80px
+	width: 940px
+	img
+		position: relative
+		left: 50%
+		bottom: 45px
+		margin-left: -69px
+	p
+		font-size: 36px
+		color: #FFF 
+		text-align: center 
+
+.home__pagination
+	position: absolute
+	left: 50%
+	margin-left: -20px 
+	a
+		cursor: pointer
+		background: url(../img/dot1.png) no-repeat
+		padding-right: 20px
+		&.active
+			background: url(../img/dot2.png) no-repeat
+
+.home__social
+	position: absolute
+	left: 35px 
+	bottom: 20px
+	
+.home__scroll
+	position: absolute
+	left: 50%
+	bottom: 50px
+	margin-left: -55px
+	a
+		font: 14px "BrandonGrotesque-Black", Arial, sans-serif
+		text-transform: uppercase 
+		text-decoration: none 
+		color: #FFF
+		bottom: 50px
+	&:after
+		content: ""
+		position: absolute
+		width: 14px
+		height: 9px
+		background: url(../img/arrow.png) no-repeat
+		left: 50%
+		margin: 15px 0 0 -7px

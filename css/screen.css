@@ -19,7 +19,48 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+
+@font-face { font-family: BrandonGrotesque-Medium; src: url("fonts/BrandonGrotesque-Medium.eot"); src: url("fonts/BrandonGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/BrandonGrotesque-Medium.woff") format("woff"), url("fonts/BrandonGrotesque-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: BrandonGrotesque-Black; src: url("fonts/BrandonGrotesque-Black.eot"); src: url("fonts/BrandonGrotesque-Black.eot?#iefix") format("embedded-opentype"), url("fonts/BrandonGrotesque-Black.woff") format("woff"), url("fonts/BrandonGrotesque-Black.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+header { position: relative; min-width: 1115px; height: 70px; background: #5bcce1; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+
+.header__left { position: absolute; }
+
+.header__logo { position: absolute; top: 18px; left: 28px; }
+
+.header__menu { position: relative; top: 23px; left: 195px; font-size: 18px; }
+.header__menu li { display: inline-block; padding-right: 16px; }
+.header__menu li a { color: white; text-decoration: none; }
+
+.header__phone { float: left; margin: 19px 0 0 240px; color: white; font-size: 24px; position: absolute; left: 50%; margin: 20px 0 0 -83px; }
+
+.header__right { position: absolute; right: 90px; top: 17px; }
+
+.header__auth input { width: 228px; height: 33px; padding: 0 0 0 20px; background: none; font-size: 16px; border: 2px solid white; color: white; }
+.header__auth input:-moz-placeholder, .header__auth input::-moz-placeholder { color: white; opacity: 1; }
+.header__auth input::-webkit-input-placeholder { color: white; }
+.header__auth input:focus { box-shadow: 0 0 0 1px #dff6fd; border-color: #dff6fd; }
+.header__auth .menu i { background: url(../img/menu_i.png) no-repeat; position: absolute; width: 26px; height: 15px; top: 11px; right: -40px; cursor: pointer; }
+.header__auth .search i { background: url(../img/search_i.png) no-repeat; position: absolute; width: 20px; height: 19px; top: 9px; right: -73px; cursor: pointer; }
+
+.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; }
+
+.home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-top: 143px; margin: 0 auto 80px; width: 940px; }
+.home__text img { position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
+.home__text p { font-size: 36px; color: white; text-align: center; }
+
+.home__pagination { position: absolute; left: 50%; margin-left: -20px; }
+.home__pagination a { cursor: pointer; background: url(../img/dot1.png) no-repeat; padding-right: 20px; }
+.home__pagination a.active { background: url(../img/dot2.png) no-repeat; }
+
+.home__social { position: absolute; left: 35px; bottom: 20px; }
+
+.home__scroll { position: absolute; left: 50%; bottom: 50px; margin-left: -55px; }
+.home__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: white; bottom: 50px; }
+.home__scroll:after { content: ""; position: absolute; width: 14px; height: 9px; background: url(../img/arrow.png) no-repeat; left: 50%; margin: 15px 0 0 -7px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
