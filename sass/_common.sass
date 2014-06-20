@@ -125,6 +125,20 @@ header
 			right: -73px
 			cursor: pointer
 
+//FOR PAGE PRODUCT SEARCH
+.header__search
+	margin-top: 6px
+	a
+		font-size: 18px 
+		color: #FFF
+		text-decoration: none
+		display: inline-block
+		margin-right: 10px
+		&:last-child
+			margin-right: 0 
+		&:hover
+			text-decoration: underline    
+		
 
 //SECTION HOME
 .home
@@ -244,6 +258,7 @@ header
 	background: #5bcce1
 	height: 830px
 	min-width: 1115px
+	padding-bottom: 80px 
 	
 .account__text
 	font-family: "BrandonGrotesque-Regular", Arial, sans-serif	
@@ -282,22 +297,40 @@ header
 		height: 14px
 		right: 20px 
 
-.account__menu 
-	position: absolute
-	bottom: 25px
-	left: 115px
-	li 
-		float: left
-		padding-right: 15px
-		&:hover a
-			text-decoration: none 
-		a
-			color: #FFF 
-
 //FOOTER
 footer
+	position: relative
+	background: #5bcce1  
+	
+.footer__common
+	position: absolute
+	bottom: 75px
+	width: 100%
+	border-top: 1px solid #fff
+	padding-top: 40px 
+	.footer__social,
+	.footer__menu
+		float: left
+		margin-left: 35px
+	.footer__menu
+		margin-top: 3px  
+		li 
+			float: left
+			padding-right: 15px
+			&:hover a
+				text-decoration: none 
+			a
+				color: #FFF
+	.footer__copyright
+		font: 13px "BrandonGrotesque-Medium", Arial, sans-serif 
+		float: right
+		margin-right: 50px  
+		color: #FFF 
+
+.footer__badges
 	height: 50px
+	background: #FFF
 	text-align: center
 	a
 		display: inline-block
-		margin: 10px 5px 0 0 
+		margin: 10px 5px 0 0   
