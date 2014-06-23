@@ -27,7 +27,11 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
 @font-face { font-family: BrandonGrotesque-Regular; src: url("fonts/BrandonGrotesque-Regular.eot"); src: url("fonts/BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/BrandonGrotesque-Regular.woff") format("woff"), url("fonts/BrandonGrotesque-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index: 1; background: #5bcce1; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+@font-face { font-family: BrandonGrotesque-Bold; src: url("fonts/BrandonGrotesque-Bold.eot"); src: url("fonts/BrandonGrotesque-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/BrandonGrotesque-Bold.woff") format("woff"), url("fonts/BrandonGrotesque-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+header, section, footer { min-width: 1115px; }
+
+header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5bcce1; border-bottom: 2px solid #54bdd0; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
 
 .header__left { position: absolute; }
 
@@ -53,7 +57,7 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .header__search a:last-child { margin-right: 0; }
 .header__search a:hover { text-decoration: underline; }
 
-.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; min-width: 1115px; }
+.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; }
 
 .home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-top: 200px; margin: 0 auto 80px; width: 940px; }
 .home__text img { position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
@@ -69,7 +73,7 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .home__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: white; bottom: 50px; }
 .home__scroll:after { content: ""; position: absolute; width: 14px; height: 9px; background: url(../img/arrow.png) no-repeat; left: 50%; margin: 15px 0 0 -7px; }
 
-.brands { position: relative; height: 830px; min-width: 1115px; }
+.brands { position: relative; height: 830px; }
 
 .brands__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding-top: 108px; }
 .brands__text .title { color: #5bcce1; font-size: 48px; }
@@ -83,7 +87,7 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .brands__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: #5bcce1; bottom: 50px; }
 .brands__scroll:after { content: ""; position: absolute; width: 14px; height: 9px; background: url(../img/arrow2.png) no-repeat; left: 50%; margin: 15px 0 0 -7px; }
 
-.account { position: relative; background: #5bcce1; height: 830px; min-width: 1115px; padding-bottom: 80px; }
+.account { position: relative; background: #5bcce1; height: 830px; padding-bottom: 80px; }
 
 .account__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding-top: 108px; color: white; }
 .account__text .title { font-size: 48px; }
@@ -95,9 +99,98 @@ header { width: 100%; min-width: 1115px; height: 70px; position: fixed; z-index:
 .account__create { margin-top: 30px; position: relative; background: none; border: 2px solid white; width: 320px; height: 50px; text-transform: uppercase; color: white; }
 .account__create:after { content: ""; background: url(../img/arrow3.png) no-repeat; position: absolute; width: 9px; height: 14px; right: 20px; }
 
-footer { position: relative; background: #5bcce1; }
+.searching { background: #5bcce1; height: 380px; }
+.searching .searching__products { width: 1000px; margin: 0 auto; padding-top: 105px; }
+.searching .searching__products .title { font: 48px "BrandonGrotesque-Regular", Arial, sans-serif; color: white; padding-bottom: 50px; }
 
-.footer__common { position: absolute; bottom: 75px; width: 100%; border-top: 1px solid white; padding-top: 40px; }
+.searching__row { position: relative; padding-bottom: 20px; }
+.searching__row input { width: 610px; height: 50px; margin-right: 16px; padding-left: 50px; }
+.searching__row i { position: absolute; width: 20px; height: 20px; background: url(../img/search_i2.png) no-repeat; left: 15px; top: 15px; }
+.searching__row button { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; background: none; border: 2px solid white; width: 320px; height: 50px; color: white; letter-spacing: 2px; text-transform: uppercase; position: relative; }
+.searching__row button span:after { content: ""; background: url(../img/arrow3.png) no-repeat; position: absolute; width: 9px; height: 14px; top: 16px; right: 30px; }
+
+.searching__features { position: relative; float: left; margin-right: 20px; }
+.searching__features:last-child { margin-right: 0; }
+.searching__features p { font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; color: white; letter-spacing: 2px; text-transform: uppercase; }
+.searching__features input { width: 300px; height: 50px; padding-left: 20px; }
+.searching__features i { background: url(../img/arrow2.png) no-repeat; position: absolute; width: 14px; height: 9px; top: 40px; right: 30px; }
+
+.checkout { background: #5bcce1; }
+
+.checkout__text { width: 1000px; margin: 0 auto; }
+.checkout__text .title { font: 48px "BrandonGrotesque-Regular", Arial, sans-serif; color: white; padding: 135px 0 70px 0; }
+
+.existing { width: 1000px; margin: 0 auto; padding: 60px 0; }
+
+.steps { color: #5bcce1; *zoom: 1; }
+.steps:after { content: " "; display: table; clear: both; }
+
+.steps__name { font: 24px "BrandonGrotesque-Regular", Arial, sans-serif; float: left; line-height: 1; }
+
+.steps__order { font: 18px "BrandonGrotesque-Medium", Arial, sans-serif; float: right; }
+.steps__order li { float: left; margin-right: 30px; opacity: 0.5; position: relative; }
+.steps__order li:after { content: ""; position: absolute; width: 9px; height: 14px; background: url(../img/arrow4.png) right no-repeat; top: 7px; right: -15px; }
+.steps__order li.active { opacity: 1; }
+
+.existing__options { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; padding-top: 60px; color: #555555; border-bottom: 1px solid #dddddd; }
+
+.existing__choose { padding: 45px 0 80px 0; font-size: 18px; color: #555555; }
+.existing__choose table { width: 35%; }
+.existing__choose label { position: relative; }
+.existing__choose input { margin-right: 15px; }
+.existing__choose i { position: absolute; width: 11px; height: 11px; background: url(../img/radio.png) no-repeat; top: 0; left: 0; }
+.existing__choose .another { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+.existing__choose .info { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; }
+
+.existing__shipping { padding: 50px 0 100px 0; font-size: 18px; }
+.existing__shipping table { width: 70%; }
+.existing__shipping table td { padding-right: 5px; }
+.existing__shipping table ul { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; margin-bottom: 30px; color: #555555; }
+.existing__shipping table ul span { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+.existing__shipping a { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; color: #5bcce1; }
+.existing__shipping a:hover { text-decoration: none; }
+
+.existing__address { float: right; margin-right: 30px; *zoom: 1; }
+.existing__address:after { content: " "; display: table; clear: both; }
+
+.existing__billing { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; color: #555555; }
+.existing__billing .card { width: 30%; margin-top: 35px; }
+.existing__billing .card td { vertical-align: top; padding-bottom: 15px; }
+.existing__billing .card td input, .existing__billing .card td img { margin: 0 auto; display: block; }
+.existing__billing .card td input { margin-top: 10px; }
+.existing__billing a { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; color: #5bcce1; }
+.existing__billing a:hover { text-decoration: none; }
+
+.existing__checkbox { margin-top: 50px; font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; line-height: 2; }
+.existing__checkbox input { margin-right: 10px; }
+
+.existing__result { *zoom: 1; padding: 60px 0; }
+.existing__result:after { content: " "; display: table; clear: both; }
+
+.existing__finish { width: 33%; float: left; }
+.existing__finish p { border-bottom: 1px solid #dddddd; margin-bottom: 45px; }
+.existing__finish ul { margin-bottom: 30px; }
+
+.existing__product { *zoom: 1; }
+.existing__product:after { content: " "; display: table; clear: both; }
+.existing__product tr { border-bottom: 1px solid #dddddd; }
+.existing__product td { width: 15%; text-align: right; padding: 30px 0; }
+.existing__product .existing__first td { padding: 0; font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; }
+.existing__product .product__name { width: 55%; text-align: left; font: 18px "BrandonGrotesque-Medium", Arial, sans-serif; }
+
+.existing__total { *zoom: 1; }
+.existing__total:after { content: " "; display: table; clear: both; }
+.existing__total table { width: 35%; text-align: right; float: right; margin: 40px 0; }
+.existing__total .medium { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+
+.existing__buttons { border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; padding: 25px 0; position: relative; }
+.existing__buttons button { width: 320px; height: 50px; background: #5bcce1; position: absolute; right: 0; }
+.existing__buttons button a { text-transform: uppercase; text-decoration: none; color: white; }
+.existing__buttons .back { background: none; border: 2px solid #5bcce1; position: relative; }
+.existing__buttons .back i { background: url(../img/arrow4.png); position: absolute; width: 9px; height: 14px; top: 15px; left: 20px; -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.existing__buttons .back a { color: #5bcce1; }
+
+.footer__common { background: #5bcce1; padding: 50px 0; border-top: 1px solid white; }
 .footer__common .footer__social, .footer__common .footer__menu { float: left; margin-left: 35px; }
 .footer__common .footer__menu { margin-top: 3px; }
 .footer__common .footer__menu li { float: left; padding-right: 15px; }

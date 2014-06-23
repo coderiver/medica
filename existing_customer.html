@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="out">
+	<header>
+		<div class="header__left">
+			<div class="header__logo">
+				<a href="#"><img src="img/logo.png" alt="Medica"></a>		
+			</div>
+			<nav class="header__menu">
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__phone">1-866-892-2032</div>
+		<div class="header__right">
+			<div class="header__auth">
+				<div class="header__search">
+					<a href="#">My Account</a>
+					<a href="#">My Cart <span>(12)</span></a>
+					</div>
+				<div class="header__auth menu"><i></i></div>
+				<div class="header__auth search"><i></i></div>
+			</div>
+		</div>
+	</header>
+	<!--FIRST SECTION-->
+	<section class="checkout">		
+			<div class="checkout__text">
+				<p class="title">Checkout</p>
+			</div>		
+	</section>
+	<!--SECOND SECTION-->
+	<section class="existing">
+	<!--STEP 1-->		
+		<div class="steps">	
+				<p class="steps__name">Step One: Delivery</p>
+				<ul class="steps__order">
+				<li class="active">step one: delivery</li>
+				<li> step two: shipping</li>
+				<li> step three: billing</li>
+				<li> step four: finish</li>
+		</div>	
+		<p class="existing__options">Delivery Options</p>
+		<div class="existing__choose">
+			<table>
+				<tr>
+					<td>
+						<input type="radio" name="choice" value="Standard">
+						<span class="another">Standard:</span><span class="info"> In 3-6 working days</span>
+					</td>
+					<td>
+						<span class="another"> 4.95 CAD</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="choice" value="Express"><span class="another">Express:</span>
+						<span class="info"> In 2-3 working days</span>
+					</td>
+					<td>
+					<span class="another"> 9.95 CAD</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--STEP 2-->
+		<div class="steps">	
+				<p class="steps__name">Step Two: Shipping</p>
+				<ul class="steps__order">
+				<li>step one: delivery</li>
+				<li class="active"> step two: shipping</li>
+				<li> step three: billing</li>
+				<li> step four: finish</li>
+		</div>	
+		<p class="existing__options">Shipping Address</p>
+		<div class="existing__shipping">
+			<div class="existing__address"><a href="#">add new address</a></div>	
+			<table>
+				<tr>
+					<td>
+						<input type="radio" name="address" value="Address1">
+					</td>
+					<td>
+						<ul>
+							<li><span class="address__name">Address 1</span></li>
+							<li>822 Richmond Street West</li>
+							<li>Suite 400</li>
+							<li>Toronto, Ontario</li>
+							<li>M6J 1C9</li>
+							<li>416.361.0030</li>
+						</ul>
+					</td>	
+					<td>
+						<input type="radio" name="address" value="Address1">
+					</td>
+					<td>
+						<ul>
+							<li><span class="address__name">Address 2</span></li>
+							<li>822 Richmond Street West</li>
+							<li>Suite 400</li>
+							<li>Toronto, Ontario</li>
+							<li>M6J 1C9</li>
+							<li>416.361.0030</li>
+						</ul>
+					</td>	
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<a href="#">edit</a>
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						<a href="#">edit</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--STEP 3-->
+		<div class="steps">	
+				<p class="steps__name">Step Three: Billing</p>
+				<ul class="steps__order">
+				<li>step one: delivery</li>
+				<li> step two: shipping</li>
+				<li class="active"> step three: billing</li>
+				<li> step four: finish</li>
+		</div>	
+		<p class="existing__options">Payment Details</p>
+		<div class="existing__billing">
+			<div class="existing__address"><a href="#">add new payment</a></div>
+			<table class="card">
+				<tr>
+					<td>
+						<img src="img/visa.png" alt="Visa">
+						<input type="radio" name="visa" value="Visa" checked>
+					</td>
+					<td>
+						Visa<br> 4520 0240 0090 XXXX <br>08/1
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><a href="#">edit</a></td>
+				</tr>
+			</table>
+			<p class="existing__options">Billing Address</p>
+			<div class="existing__shipping">
+			<div class="existing__address"><a href="#">add new address</a></div>	
+			<table>
+				<tr>
+					<td>
+						<input type="radio" name="person" value="John">
+					</td>
+					<td>
+						<ul>
+							<li><span class="address__name">John Doe</span></li>
+							<li>822 Richmond Street West</li>
+							<li>Suite 400</li>
+							<li>Toronto, Ontario</li>
+							<li>M6J 1C9</li>
+							<li>416.361.0030</li>
+						</ul>
+					</td>	
+					<td>
+						<input type="radio" name="person" value="Jane">
+					</td>
+					<td>
+						<ul>
+							<li><span class="address__name">Jane Doe</span></li>
+							<li>822 Richmond Street West</li>
+							<li>Suite 400</li>
+							<li>Toronto, Ontario</li>
+							<li>M6J 1C9</li>
+							<li>416.361.0030</li>
+						</ul>
+					</td>	
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<a href="#">edit</a>
+					</td>
+					<td>&nbsp;</td>
+					<td>
+						<a href="#">edit</a>
+					</td>
+				</tr>
+			</table>
+			<div class="existing__checkbox">
+				<input type="checkbox" name="choice" value="Express">
+				<span class="another">Billing address is the same as shipping address</span><br>
+				<input type="checkbox" name="choice" value="Express">
+				<span class="another">I have read and accept the <a href="#">terms of purchase</a> and <a href="#">privacy policy</a></span>
+				<p>*Required field</p>
+			</div>
+		</div>
+		<!--STEP 4-->
+		<div class="steps">	
+				<p class="steps__name">Step Four: Finish</p>
+				<ul class="steps__order">
+				<li>step one: delivery</li>
+				<li> step two: shipping</li>
+				<li> step three: billing</li>
+				<li class="active"> step four: finish</li>
+		</div>	
+		<div class="existing__result">
+			<div class="existing__finish">
+				<p>Shipping address</p>
+				<ul>
+					<li>822 Richmond Street West</li>
+					<li>Suite 400</li>
+					<li>Toronto, Ontario</li>
+					<li>M6J 1C9</li>
+					<li>416.361.0030</li>
+				</ul>
+				<a href="#">edit</a>
+			</div>
+			<div class="existing__finish">
+				<p>Billing address</p>
+				<ul>
+					<li>822 Richmond Street West</li>
+					<li>Suite 400</li>
+					<li>Toronto, Ontario</li>
+					<li>M6J 1C9</li>
+					<li>416.361.0030</li>
+				</ul>
+				<a href="#">edit</a>
+			</div>
+			<div class="existing__finish">
+				<p>Payment info</p>
+				<ul>
+					<li>Visa</li>
+					<li>4520 0240 0090 XXXX</li>
+					<li>08/1</li>
+				</ul>
+				<a href="#">edit</a>
+			</div>
+		</div>	
+		<table class="existing__product">
+			<tr class="existing__first">
+				<td class="product__name">Product</td>
+				<td>Price</td>
+				<td>Quantity</td>
+				<td>Amount</td>
+			</tr>
+			<tr>
+				<td class="product__name">RESTYLANE® LIPP™ 1ml</td>
+				<td>219.00</td>
+				<td>11</td>
+				<td>2409.00 CAD</td>
+			</tr>
+			<tr>
+				<td class="product__name">RESTYLANE® LIPP™ .5ml</td>
+				<td>189.00</td>
+				<td>1</td>
+				<td>189.00 CAD</td>
+			</tr>
+		</table>
+		<div class="existing__total">
+			<table>
+				<tr>
+					<td>Total Products</td>
+					<td>2598.00 CAD</td>
+				</tr>
+				<tr>
+					<td>Discount</td>
+					<td>0.00 CAD</td>
+				</tr>
+				<tr>
+					<td>Standard Shipping</td>
+					<td>4.95 CAD</td>
+				</tr>
+				<tr>
+					<td class="medium">Subtotal</td>
+					<td class="medium">2603.95 CAD</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>HST/TVH 13.00%</td>
+					<td>338.51 CAD</td>
+				</tr>
+				<tr>
+					<td>HST/TVH 12.96%</td>
+					<td>337.47 CAD</td>
+				</tr>
+				<tr>
+					<td>Total Tax</td>
+					<td>675.98 CAD</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="medium">TOTAL</td>
+					<td class="medium">3279.93 CAD</td>
+				</tr>
+			</table>
+		</div>	
+		<div class="existing__buttons">
+			<button class="back">
+				<i></i>
+				<a href="#">Back to cart</a>
+			</button>
+			<button><a href="#">Complete order</a></button>
+		</div>
+	</section> 
+	<!--THIRD SECTION-->
+	
+<!--FOOTER-->	
+	<footer>
+			<div class="footer__common">
+				<div class="footer__social">
+					<a href="https://www.facebook.com/"><img src="img/fb.png" alt="facebook"></a>
+					<a href="https://twitter.com/" ><img src="img/twitter.png" alt="twitter"></a>
+				</div>
+				<nav class="footer__menu">
+					<ul>
+						<li><a href="#"><a href="#">Privacy Policy</a></li>
+						<li><a href="#"><a href="#">Security</a></li>
+						<li><a href="#"><a href="#">Order Status</a></li>
+						<li><a href="#"><a href="#">Terms of Service</a></li>
+						<li><a href="#"><a href="#">Order</a></li>
+						<li><a href="#"><a href="#">FAQ</a></li>
+						<li><a href="#"><a href="#">Sitemap</a></li>
+						<li><a href="#"><a href="#">Sitemap XML</a></li>
+						<li><a href="#"><a href="#">URL list txt</a></li>
+						<li><a href="#"><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<div class="footer__copyright">© 2014 Medica Depot</div>
+			</div>
+		<div class="footer__badges">
+			<a href="#"><img src="img/badge1.png" alt="Security Badge"></a>
+			<a href="#"><img src="img/badge2.png" alt="Security Badge"></a>
+			<a href="#"><img src="img/badge3.png" alt="Security Badge"></a>
+			<a href="#"><img src="img/badge4.png" alt="Security Badge"></a>
+			<a href="#"><img src="img/badge5.png" alt="Security Badge"></a>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>
