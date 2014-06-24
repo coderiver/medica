@@ -440,13 +440,18 @@ header
 	table
 		width: 70%
 		td
-			padding-right: 5px 
+			padding-right: 15px 
 		ul
 			font-family: "BrandonGrotesque-Regular", Arial, sans-serif
 			margin-bottom: 30px 
 			color: #555
 			span
 				font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+		.radio__title
+			&:before,
+			&:after
+				top: -11px
+				left: -1px 		
 	a
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
 		color: #5bcce1
@@ -545,11 +550,18 @@ header
 		td
 			vertical-align: top
 			padding-bottom: 15px
-			input, img
+			img
 				margin: 0 auto
 				display: block
-			input
-				margin-top: 10px
+			.radio
+				input
+					left: 20px
+					top: 45px
+			.radio__title
+				&:before,
+				&:after
+					top: -11px
+					left: 19px
 	a
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
 		color: #5bcce1
