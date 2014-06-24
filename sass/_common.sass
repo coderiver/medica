@@ -109,19 +109,15 @@ header
 		padding-left: 20px  
 	.menu
 		i
-			background: url(../img/menu_i.png) no-repeat
+			+s(menu_i)
 			position: absolute
-			width: 26px
-			height: 15px
 			top: 11px
 			right: -40px
 			cursor: pointer
 	.search
 		i
-			background: url(../img/search_i.png) no-repeat
+			+s(search_i)
 			position: absolute
-			width: 20px
-			height: 19px
 			top: 9px
 			right: -73px
 			cursor: pointer
@@ -196,11 +192,9 @@ header
 	&:after
 		content: ""
 		position: absolute
-		width: 14px
-		height: 9px
-		background: url(../img/arrow.png) no-repeat
 		left: 50%
 		margin: 15px 0 0 -7px
+		+s(arrow)
 
 //SECTION BRANDS
 .brands
@@ -248,9 +242,9 @@ header
 		position: absolute
 		width: 14px
 		height: 9px
-		background: url(../img/arrow2.png) no-repeat
 		left: 50%
 		margin: 15px 0 0 -7px
+		+s(arrow2)
 		
 //SECTION ACCOUNT
 .account
@@ -290,11 +284,9 @@ header
 	color: #fff
 	&:after
 		content: ""
-		background: url(../img/arrow3.png) no-repeat
 		position: absolute
-		width: 9px
-		height: 14px
 		right: 20px 
+		+s(arrow3)
 
 //FOR PAGE SEARCH PRODUCTS
 .searching
@@ -317,13 +309,12 @@ header
 		height: 50px
 		margin-right: 16px 
 		padding-left: 50px
+		+placeholder-color(#555)
 	i
-		position: absolute   
-		width: 20px
-		height: 20px 
-		background: url(../img/search_i2.png) no-repeat 
+		position: absolute  
 		left: 15px
 		top: 15px 
+		+s(search_i2)
 	button
 		font: 14px "BrandonGrotesque-Black", Arial, sans-serif
 		background: none
@@ -337,12 +328,10 @@ header
 		span
 			&:after
 				content: ""
-				background: url(../img/arrow3.png) no-repeat
 				position: absolute
-				width: 9px
-				height: 14px
 				top: 16px
 				right: 30px
+				+s(arrow3)
 
 .searching__features
 	position: relative
@@ -358,14 +347,13 @@ header
 		width: 300px
 		height: 50px   
 		padding-left: 20px 
-		color: #555 
+		color: #555
+		+placeholder-color(#555) 
 	i
-		background: url(../img/arrow2.png) no-repeat
 		position: absolute
-		width: 14px
-		height: 9px
 		top: 20px
 		right: 30px
+		+s(arrow2)
 
 .result
 	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
@@ -375,9 +363,16 @@ header
 	button
 		background: #FFF
 		border: 2px solid #5bcce1
+		width: 320px
+		height: 50px
 		a
 			font-family: "BrandonGrotesque-Black", Arial, sans-serif
 			text-transform: uppercase 
+			text-decoration: none 
+			color: #5bcce1 
+		i
+			+s(arrow2)
+			position: absolute	
 	.last
 		margin-right: 0 
 
@@ -417,12 +412,10 @@ header
 		position: relative
 		&:after
 			content: ""
-			position: absolute
-			width: 9px 
-			height: 14px 
-			background: url(../img/arrow4.png) right no-repeat 
+			position: absolute 
 			top: 7px
 			right: -15px 
+			+s(arrow4)
 		&.active
 			opacity: 1 
 			
@@ -647,25 +640,24 @@ header
 	button
 		width: 320px 
 		height: 50px 
-		background: #5bcce1 
-		position: absolute
-		right: 0
 		a
 			text-transform: uppercase
 			text-decoration: none  
 			color: #FFF 
+	.complete
+		background: #5bcce1 
+		position: absolute
+		right: 0
 	.back
 		background: none
 		border: 2px solid #5bcce1
 		position: relative
 		i
-			background: url(../img/arrow4.png)
 			position: absolute
-			width: 9px
-			height: 14px 
 			top: 15px
 			left: 20px
 			+rotate(180)  
+			+s(arrow4)
 		a
 			color: #5bcce1 
 			
@@ -678,11 +670,13 @@ header
 		line-height: 2 
 
 .newcus__fieldset
+	.row
+		margin-bottom: 20px 
 	input
 		font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 		width: 300px
 		height: 50px
-		margin: 0 20px 20px 0   
+		margin-right: 20px  
 		padding-left: 20px
 		border: 1px solid #ddd
 		color: #555
