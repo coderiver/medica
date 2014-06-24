@@ -31,7 +31,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
 header, section, footer { min-width: 1115px; }
 
-header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5bcce1; border-bottom: 2px solid #54bdd0; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5bcce1; border-bottom: 2px solid #54bdd0; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
 
 .header__left { position: absolute; }
 
@@ -120,7 +120,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5b
 .checkout__text { width: 1000px; margin: 0 auto; }
 .checkout__text .title { font: 48px "BrandonGrotesque-Regular", Arial, sans-serif; color: white; padding: 135px 0 70px 0; }
 
-.existing { width: 1000px; margin: 0 auto; padding: 60px 0; }
+.existing, .newcus { width: 1000px; margin: 0 auto; padding: 60px 0; }
 
 .steps { color: #5bcce1; *zoom: 1; }
 .steps:after { content: " "; display: table; clear: both; }
@@ -136,10 +136,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5b
 
 .existing__choose { padding: 45px 0 80px 0; font-size: 18px; color: #555555; }
 .existing__choose table { width: 35%; }
-.existing__choose label { position: relative; }
-.existing__choose input { margin-right: 15px; }
-.existing__choose i { position: absolute; width: 11px; height: 11px; background: url(../img/radio.png) no-repeat; top: 0; left: 0; }
-.existing__choose .another { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+.existing__choose .another { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-left: 20px; }
 .existing__choose .info { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; }
 
 .existing__shipping { padding: 50px 0 100px 0; font-size: 18px; }
@@ -149,6 +146,22 @@ header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5b
 .existing__shipping table ul span { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
 .existing__shipping a { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; color: #5bcce1; }
 .existing__shipping a:hover { text-decoration: none; }
+
+.checkbox { display: inline-block; position: relative; }
+.checkbox input { position: absolute; left: 0; top: 7px; width: 15px; height: 15px; z-index: 2; opacity: 0; }
+.checkbox input:checked + .checkbox__title:after { display: block; }
+
+.checkbox__title { display: block; position: relative; z-index: 1; padding-left: 30px; }
+.checkbox__title:before { content: ""; position: absolute; left: 0; top: 7px; width: 13px; height: 13px; border: 1px solid #dddddd; background: white; }
+.checkbox__title:after { content: ""; display: none; position: absolute; top: 9px; left: 0; z-index: 2; background: url('../img/icons-sd7a297dd65.png') 0 -42px no-repeat; width: 14px; height: 9px; }
+
+.radio { display: inline-block; position: relative; }
+.radio input { position: absolute; left: 0; top: 8px; width: 11px; height: 11px; z-index: 2; opacity: 0; }
+.radio input:checked + .radio__title:after { display: block; }
+
+.radio__title { display: inline-block; position: relative; z-index: 1; }
+.radio__title:before { content: ""; position: absolute; left: 0; top: 8px; width: 11px; height: 11px; background: url('../img/icons-sd7a297dd65.png') 0 -21px no-repeat; width: 11px; height: 11px; }
+.radio__title:after { content: ""; display: none; position: absolute; top: 8px; left: 0; z-index: 2; background: url('../img/icons-sd7a297dd65.png') 0 0 no-repeat; width: 11px; height: 11px; }
 
 .existing__address { float: right; margin-right: 30px; *zoom: 1; }
 .existing__address:after { content: " "; display: table; clear: both; }
@@ -160,8 +173,12 @@ header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5b
 .existing__billing .card td input { margin-top: 10px; }
 .existing__billing a { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; color: #5bcce1; }
 .existing__billing a:hover { text-decoration: none; }
+.existing__billing .payment { width: 45%; margin-top: 40px; }
+.existing__billing .payment .radio input { left: 21px; top: 45px; }
+.existing__billing .payment .radio__title:before, .existing__billing .payment .radio__title:after { left: -38px; top: 8px; }
+.existing__billing .payment a { text-decoration: none; }
 
-.existing__checkbox { margin-top: 50px; font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; line-height: 2; }
+.existing__checkbox { margin-top: 40px; font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; line-height: 2; }
 .existing__checkbox input { margin-right: 10px; }
 
 .existing__result { *zoom: 1; padding: 60px 0; }
@@ -189,6 +206,16 @@ header { width: 100%; height: 70px; position: fixed; z-index: 1; background: #5b
 .existing__buttons .back { background: none; border: 2px solid #5bcce1; position: relative; }
 .existing__buttons .back i { background: url(../img/arrow4.png); position: absolute; width: 9px; height: 14px; top: 15px; left: 20px; -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .existing__buttons .back a { color: #5bcce1; }
+
+.newcus__shipping { padding: 45px 0 60px 0; }
+.newcus__shipping span { font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; color: #555555; line-height: 2; }
+
+.newcus__fieldset { color: #555555; }
+.newcus__fieldset input { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; color: #555555; width: 300px; height: 50px; margin: 0 20px 20px 0; padding-left: 20px; border: 1px solid #dddddd; }
+.newcus__fieldset .long { width: 644px; }
+.newcus__fieldset .dropdown { display: inline-block; position: relative; width: 320px; margin-right: 20px; }
+.newcus__fieldset .dropdown select { opacity: 0; position: absolute; width: 100%; height: 50px; z-index: 3; -webkit-appearance: none; }
+.newcus__fieldset .dropdown i { position: absolute; width: 14px; height: 9px; top: 20px; right: 20px; background: url('../img/icons-sd7a297dd65.png') 0 -42px no-repeat; width: 14px; height: 9px; cursor: pointer; }
 
 .footer__common { background: #5bcce1; padding: 50px 0; border-top: 1px solid white; }
 .footer__common .footer__social, .footer__common .footer__menu { float: left; margin-left: 35px; }
