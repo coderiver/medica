@@ -299,7 +299,7 @@ header
 		.title
 			font: 48px "BrandonGrotesque-Regular", Arial, sans-serif	
 			color: #FFF
-			padding-bottom: 50px 
+			padding-bottom: 35px 
 			
 .searching__row
 	position: relative
@@ -358,11 +358,13 @@ header
 .result
 	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 	color: #555 
+	.show
+		font-size: 24px 
 	span
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
 	button
 		background: #FFF
-		border: 2px solid #5bcce1
+		border: 3px solid #5bcce1
 		width: 320px
 		height: 50px
 		a
@@ -373,9 +375,42 @@ header
 		i
 			+s(arrow2)
 			position: absolute	
+			top: 20px
+			right: 20px
 	.last
 		margin-right: 0 
+		position: absolute
+		top: 50px
+		right: 0
 
+.result__prodsearch
+	margin-top: 80px
+	tr
+		border-bottom: 1px solid #ddd
+	td
+		padding: 30px 0
+	.product__name
+		padding-left: 20px
+		width: 33% 
+	a, .blue
+		color: #5bcce1 
+	a		
+		&:hover
+			text-decoration: none 
+	.prinf
+		vertical-align: middle
+	 
+.result__pagination
+	text-align: right
+	margin-top: 30px
+	a	
+		color: #5bcce1 
+		text-decoration: none
+		+ :last-child
+			text-decoration: underline
+	.active
+		text-decoration: underline 		
+		
 //FOR PAGE EXISTING CUSTOMER
 .checkout
 	background: #5bcce1
@@ -392,6 +427,7 @@ header
 	width: 1000px 	 
 	margin: 0 auto
 	padding: 60px 0
+	position: relative 
 
 .steps
 	color: #5bcce1
@@ -706,17 +742,18 @@ header
 		z-index: 3
 		-webkit-appearance: none  
 		color: #555		
+		cursor: pointer
 //FOOTER	
 .footer__common
 	background: #5bcce1 
-	padding: 50px 0 
+	height: 100px 
 	border-top: 1px solid #fff
 	.footer__social,
 	.footer__menu
 		float: left
 		margin-left: 35px
+		margin-top: 50px 
 	.footer__menu
-		margin-top: 3px  
 		li 
 			float: left
 			padding-right: 15px
@@ -727,7 +764,7 @@ header
 	.footer__copyright
 		font: 13px "BrandonGrotesque-Medium", Arial, sans-serif 
 		float: right
-		margin-right: 50px  
+		margin: 45px 50px 0 0  
 		color: #FFF 
 
 .footer__badges
