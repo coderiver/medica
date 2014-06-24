@@ -98,18 +98,15 @@ header
 	top: 17px
 			
 .header__auth
-	input
-		width: 228px
-		height: 33px
-		padding: 0 0 0 20px
+	button
+		width: 233px
+		height: 37px
 		background: none
 		font-size: 16px
 		border: 2px solid #fff
 		color: white
-		+placeholder-color(#fff)
-		&:focus
-			box-shadow: 0 0 0 1px #dff6fd
-			border-color: #dff6fd
+		text-align: left
+		padding-left: 20px  
 	.menu
 		i
 			background: url(../img/menu_i.png) no-repeat
@@ -147,7 +144,8 @@ header
 //SECTION HOME
 .home
 	position: relative
-	background: url(../img/bg-1.png) no-repeat
+	background: url(../img/bg.jpg) 50% 30% no-repeat
+	background-size: cover
 	height: 830px
 	
 .home__text
@@ -171,13 +169,13 @@ header
 	margin-left: -20px 
 	a
 		cursor: pointer
-		background: url(../img/dot1.png) no-repeat
 		display: inline-block
 		width: 11px
 		height: 11px
 		margin: 0 3px
+		+s(dot)
 		&.active
-			background: url(../img/dot2.png) no-repeat
+			+s(dot1)
 
 .home__social
 	position: absolute
@@ -299,7 +297,6 @@ header
 		right: 20px 
 
 //FOR PAGE SEARCH PRODUCTS
-//SECTION SEARCH
 .searching
 	background: #5bcce1
 	height: 380px
@@ -350,8 +347,7 @@ header
 .searching__features
 	position: relative
 	float: left
-	margin-right: 20px
-	&:last-child
+	.last
 		margin-right: 0 
 	p
 		font: 14px "BrandonGrotesque-Medium", Arial, sans-serif 
@@ -362,14 +358,28 @@ header
 		width: 300px
 		height: 50px   
 		padding-left: 20px 
+		color: #555 
 	i
 		background: url(../img/arrow2.png) no-repeat
 		position: absolute
 		width: 14px
 		height: 9px
-		top: 40px
+		top: 20px
 		right: 30px
 
+.result
+	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
+	color: #555 
+	span
+		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+	button
+		background: #FFF
+		border: 2px solid #5bcce1
+		a
+			font-family: "BrandonGrotesque-Black", Arial, sans-serif
+			text-transform: uppercase 
+	.last
+		margin-right: 0 
 
 //FOR PAGE EXISTING CUSTOMER
 .checkout
@@ -668,38 +678,40 @@ header
 		line-height: 2 
 
 .newcus__fieldset
-	color: #555
 	input
 		font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
-		color: #555 
 		width: 300px
 		height: 50px
 		margin: 0 20px 20px 0   
 		padding-left: 20px
 		border: 1px solid #ddd
+		color: #555
+		+placeholder-color(#555)
 	.long
 		width: 644px	
-	.dropdown
-		display: inline-block
-		position: relative
-		width: 320px
-		margin-right: 20px
-		select
-			opacity: 0
-			position: absolute  
-			width: 100%
-			height: 50px 
-			z-index: 3
-			-webkit-appearance: none  
-		i			
-			position: absolute
-			width: 14px
-			height: 9px  
-			top: 20px
-			right: 20px
-			+s(arrow5)
-			cursor: pointer
-		
+	i			
+		position: absolute
+		width: 14px
+		height: 9px  
+		top: 20px
+		right: 20px
+		+s(arrow5)
+		cursor: pointer
+
+.dropdown
+	display: inline-block
+	position: relative
+	width: 320px
+	height: 50px
+	margin-right: 20px
+	select
+		opacity: 0
+		position: absolute  
+		width: 100%
+		height: 50px 
+		z-index: 3
+		-webkit-appearance: none  
+		color: #555		
 //FOOTER	
 .footer__common
 	background: #5bcce1 

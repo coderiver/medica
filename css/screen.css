@@ -45,10 +45,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 
 .header__right { position: absolute; right: 90px; top: 17px; }
 
-.header__auth input { width: 228px; height: 33px; padding: 0 0 0 20px; background: none; font-size: 16px; border: 2px solid white; color: white; }
-.header__auth input:-moz-placeholder, .header__auth input::-moz-placeholder { color: white; opacity: 1; }
-.header__auth input::-webkit-input-placeholder { color: white; }
-.header__auth input:focus { box-shadow: 0 0 0 1px #dff6fd; border-color: #dff6fd; }
+.header__auth button { width: 233px; height: 37px; background: none; font-size: 16px; border: 2px solid white; color: white; text-align: left; padding-left: 20px; }
 .header__auth .menu i { background: url(../img/menu_i.png) no-repeat; position: absolute; width: 26px; height: 15px; top: 11px; right: -40px; cursor: pointer; }
 .header__auth .search i { background: url(../img/search_i.png) no-repeat; position: absolute; width: 20px; height: 19px; top: 9px; right: -73px; cursor: pointer; }
 
@@ -57,15 +54,15 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .header__search a:last-child { margin-right: 0; }
 .header__search a:hover { text-decoration: underline; }
 
-.home { position: relative; background: url(../img/bg-1.png) no-repeat; height: 830px; }
+.home { position: relative; background: url(../img/bg.jpg) 50% 30% no-repeat; background-size: cover; height: 830px; }
 
 .home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-top: 200px; margin: 0 auto 80px; width: 940px; }
 .home__text img { position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
 .home__text p { font-size: 36px; color: white; text-align: center; }
 
 .home__pagination { position: absolute; left: 50%; margin-left: -20px; }
-.home__pagination a { cursor: pointer; background: url(../img/dot1.png) no-repeat; display: inline-block; width: 11px; height: 11px; margin: 0 3px; }
-.home__pagination a.active { background: url(../img/dot2.png) no-repeat; }
+.home__pagination a { cursor: pointer; display: inline-block; width: 11px; height: 11px; margin: 0 3px; background: url('../img/icons-s675db15190.png') 0 -21px no-repeat; width: 11px; height: 11px; }
+.home__pagination a.active { background: url('../img/icons-s675db15190.png') 0 -63px no-repeat; width: 11px; height: 11px; }
 
 .home__social { position: absolute; left: 35px; bottom: 20px; }
 
@@ -109,11 +106,17 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .searching__row button { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; background: none; border: 2px solid white; width: 320px; height: 50px; color: white; letter-spacing: 2px; text-transform: uppercase; position: relative; }
 .searching__row button span:after { content: ""; background: url(../img/arrow3.png) no-repeat; position: absolute; width: 9px; height: 14px; top: 16px; right: 30px; }
 
-.searching__features { position: relative; float: left; margin-right: 20px; }
-.searching__features:last-child { margin-right: 0; }
+.searching__features { position: relative; float: left; }
+.searching__features .last { margin-right: 0; }
 .searching__features p { font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; color: white; letter-spacing: 2px; text-transform: uppercase; }
-.searching__features input { width: 300px; height: 50px; padding-left: 20px; }
-.searching__features i { background: url(../img/arrow2.png) no-repeat; position: absolute; width: 14px; height: 9px; top: 40px; right: 30px; }
+.searching__features input { width: 300px; height: 50px; padding-left: 20px; color: #555555; }
+.searching__features i { background: url(../img/arrow2.png) no-repeat; position: absolute; width: 14px; height: 9px; top: 20px; right: 30px; }
+
+.result { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; color: #555555; }
+.result span { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+.result button { background: white; border: 2px solid #5bcce1; }
+.result button a { font-family: "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; }
+.result .last { margin-right: 0; }
 
 .checkout { background: #5bcce1; }
 
@@ -154,15 +157,15 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 
 .checkbox__title { display: block; position: relative; z-index: 1; padding-left: 30px; }
 .checkbox__title:before { content: ""; position: absolute; left: 0; top: 7px; width: 13px; height: 13px; border: 1px solid #dddddd; background: white; }
-.checkbox__title:after { content: ""; display: none; position: absolute; top: 9px; left: 0; z-index: 2; background: url('../img/icons-sd7a297dd65.png') 0 -42px no-repeat; width: 14px; height: 9px; }
+.checkbox__title:after { content: ""; display: none; position: absolute; top: 9px; left: 0; z-index: 2; background: url('../img/icons-s675db15190.png') 0 -84px no-repeat; width: 14px; height: 9px; }
 
 .radio { display: inline-block; position: relative; }
 .radio input { position: absolute; left: 0; top: 8px; width: 11px; height: 11px; z-index: 2; opacity: 0; }
 .radio input:checked + .radio__title:after { display: block; }
 
 .radio__title { display: inline-block; position: relative; z-index: 1; }
-.radio__title:before { content: ""; position: absolute; left: 0; top: 8px; width: 11px; height: 11px; background: url('../img/icons-sd7a297dd65.png') 0 -21px no-repeat; width: 11px; height: 11px; }
-.radio__title:after { content: ""; display: none; position: absolute; top: 8px; left: 0; z-index: 2; background: url('../img/icons-sd7a297dd65.png') 0 0 no-repeat; width: 11px; height: 11px; }
+.radio__title:before { content: ""; position: absolute; left: 0; top: 8px; width: 11px; height: 11px; background: url('../img/icons-s675db15190.png') 0 -42px no-repeat; width: 11px; height: 11px; }
+.radio__title:after { content: ""; display: none; position: absolute; top: 8px; left: 0; z-index: 2; background: url('../img/icons-s675db15190.png') 0 0 no-repeat; width: 11px; height: 11px; }
 
 .existing__address { float: right; margin-right: 30px; *zoom: 1; }
 .existing__address:after { content: " "; display: table; clear: both; }
@@ -212,12 +215,14 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .newcus__shipping { padding: 45px 0 60px 0; }
 .newcus__shipping span { font: 14px "BrandonGrotesque-Medium", Arial, sans-serif; color: #555555; line-height: 2; }
 
-.newcus__fieldset { color: #555555; }
-.newcus__fieldset input { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; color: #555555; width: 300px; height: 50px; margin: 0 20px 20px 0; padding-left: 20px; border: 1px solid #dddddd; }
+.newcus__fieldset input { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; width: 300px; height: 50px; margin: 0 20px 20px 0; padding-left: 20px; border: 1px solid #dddddd; color: #555555; }
+.newcus__fieldset input:-moz-placeholder, .newcus__fieldset input::-moz-placeholder { color: #555555; opacity: 1; }
+.newcus__fieldset input::-webkit-input-placeholder { color: #555555; }
 .newcus__fieldset .long { width: 644px; }
-.newcus__fieldset .dropdown { display: inline-block; position: relative; width: 320px; margin-right: 20px; }
-.newcus__fieldset .dropdown select { opacity: 0; position: absolute; width: 100%; height: 50px; z-index: 3; -webkit-appearance: none; }
-.newcus__fieldset .dropdown i { position: absolute; width: 14px; height: 9px; top: 20px; right: 20px; background: url('../img/icons-sd7a297dd65.png') 0 -42px no-repeat; width: 14px; height: 9px; cursor: pointer; }
+.newcus__fieldset i { position: absolute; width: 14px; height: 9px; top: 20px; right: 20px; background: url('../img/icons-s675db15190.png') 0 -84px no-repeat; width: 14px; height: 9px; cursor: pointer; }
+
+.dropdown { display: inline-block; position: relative; width: 320px; height: 50px; margin-right: 20px; }
+.dropdown select { opacity: 0; position: absolute; width: 100%; height: 50px; z-index: 3; -webkit-appearance: none; color: #555555; }
 
 .footer__common { background: #5bcce1; padding: 50px 0; border-top: 1px solid white; }
 .footer__common .footer__social, .footer__common .footer__menu { float: left; margin-left: 35px; }
