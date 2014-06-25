@@ -51,7 +51,7 @@ body
 +font(BrandonGrotesque-Bold, BrandonGrotesque-Bold)
 
 header, section, footer
-	min-width: 1115px	
+	min-width: 1115px
 // common blocks      
 //HEADER
 .out
@@ -304,6 +304,7 @@ header
 		height: 50px
 		margin: 0 20px 20px 0   
 		padding-left: 20px
+		+placeholder-color(#555)
 
 .account__create
 	margin-top: 30px
@@ -320,6 +321,21 @@ header
 		right: 20px 
 		+s(arrow3)
 
+.welcome
+	button
+		margin-right: 20px
+
+.welcome__text
+	font: 24px "BrandonGrotesque-Medium", Arial, sans-serif	
+	margin-top: 65px 
+	color: #b9f4ff
+	opacity: 0.8		
+	.ps
+		font-size: 18px
+		margin-top: 50px 
+	a
+		color: #fff  
+		
 //FOR PAGE SEARCH PRODUCTS
 .searching
 	background: #5bcce1
