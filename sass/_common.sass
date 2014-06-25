@@ -54,6 +54,10 @@ header, section, footer
 	min-width: 1115px	
 // common blocks      
 //HEADER
+.out
+	position: relative
+	overflow: hidden
+	
 header
 	width: 100%	
 	height: 70px	
@@ -107,20 +111,61 @@ header
 		color: white
 		text-align: left
 		padding-left: 20px  
-	.menu
-		i
-			+s(menu_i)
-			position: absolute
-			top: 11px
-			right: -40px
-			cursor: pointer
+	.auth__menu
+		+s(menu_i)
+		position: absolute
+		top: 11px
+		right: -40px
+		cursor: pointer
 	.search
-		i
-			+s(search_i)
-			position: absolute
-			top: 9px
-			right: -73px
-			cursor: pointer
+		+s(search_i)
+		position: absolute
+		top: 9px
+		right: -73px
+		cursor: pointer
+			
+.header__sidebar
+	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
+	background: #fff
+	position: absolute
+	width: 380px
+	height: 98.5%
+	z-index: 5
+	top: 0
+	right: -380px
+	box-shadow: 0px 5px 3px #d9d9d9
+	+tr(all 0.3s linear)
+	&.is-active
+		right: 0
+	li
+		border-bottom: 1px solid #ade5f0 
+		padding: 25px 0 19px 30px
+		&:hover a
+			color: #5BCCE1 
+		a			
+			text-decoration: none 
+			color: #555 
+			display: inherit
+	p
+		margin: 345px 0 0 30px
+		a
+			font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+			color: #5BCCE1 	
+
+.header__toggle		
+	height: 70px
+	border-bottom: 1px solid #ade5f0 	
+	.mactive
+		+s(menu_a)
+		position: absolute
+		top: 30px
+		left: 30px
+	.close
+		+s(close)
+		position: absolute
+		top: 30px
+		right: 30px
+		cursor: pointer
 
 //FOR PAGE PRODUCT SEARCH
 .header__search
@@ -162,7 +207,7 @@ header
 .home__pagination
 	position: absolute
 	left: 50%
-	margin-left: -20px 
+	margin-left: -28px 
 	a
 		cursor: pointer
 		display: inline-block
@@ -178,23 +223,24 @@ header
 	left: 35px 
 	bottom: 20px
 	
-.home__scroll
+.home__scroll, .brands__scroll
 	position: absolute
 	left: 50%
 	bottom: 50px
-	margin-left: -55px
+	margin-left: -65px
 	a
 		font: 14px "BrandonGrotesque-Black", Arial, sans-serif
 		text-transform: uppercase 
 		text-decoration: none 
 		color: #FFF
 		bottom: 50px
-	&:after
-		content: ""
-		position: absolute
-		left: 50%
-		margin: 15px 0 0 -7px
-		+s(arrow)
+		&:after
+			content: ""
+			position: absolute
+			top: 30px
+			left: 50%
+			margin: 0 0 0 -7px
+			+s(arrow)
 
 //SECTION BRANDS
 .brands
@@ -227,24 +273,10 @@ header
 				display: block 
 				
 .brands__scroll
-	position: absolute
-	left: 50%
-	bottom: 50px
-	margin-left: -55px
 	a
-		font: 14px "BrandonGrotesque-Black", Arial, sans-serif
-		text-transform: uppercase 
-		text-decoration: none 
 		color: #5bcce1
-		bottom: 50px
-	&:after
-		content: ""
-		position: absolute
-		width: 14px
-		height: 9px
-		left: 50%
-		margin: 15px 0 0 -7px
-		+s(arrow2)
+		&:after
+			+s(arrow2)
 		
 //SECTION ACCOUNT
 .account
