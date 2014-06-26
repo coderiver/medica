@@ -51,7 +51,7 @@ body
 +font(BrandonGrotesque-Bold, BrandonGrotesque-Bold)
 
 header, section, footer
-	min-width: 1115px
+	//min-width: 1115px
 // common blocks      
 //HEADER
 .out
@@ -67,11 +67,10 @@ header
 	border-bottom: 2px solid #54bdd0
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif 
 
-.header__left
+.header__left, .header__logo, .header__right, .header__phone
 	position: absolute
 
 .header__logo
-	position: absolute
 	top: 18px
 	left: 28px  
 	
@@ -80,24 +79,25 @@ header
 	top: 23px
 	left: 195px
 	font-size: 18px 
+	+rt(815)
+		display: none	
 	li
 		display: inline-block
 		padding-right: 16px
 		a
 			color: #FFF
 			text-decoration: none 
-			
+						
 .header__phone
 	float: left
-	margin: 19px 0 0 240px
-	color: #FFF
-	font-size: 24px
-	position: absolute
 	left: 50%
+	color: #FFF
+	font-size: 24px	
 	margin: 20px 0 0 -83px
+	+r(w1270)
+		display: none
 
 .header__right
-	position: absolute
 	right: 90px
 	top: 17px
 			
@@ -111,6 +111,13 @@ header
 		color: white
 		text-align: left
 		padding-left: 20px  
+		+rt(480)
+			width: 190px
+			text-align: center
+			padding: 5px
+			font-size: 15px 
+		+r(w360)
+			display: none
 	.auth__menu
 		+s(menu_i)
 		position: absolute
@@ -185,15 +192,17 @@ header
 //SECTION HOME
 .home
 	position: relative
-	background: url(../img/bg.jpg) 50% 30% no-repeat
+	background: url(../img/bg.jpg) 50% 0% no-repeat
 	background-size: cover
-	height: 830px
+	//height: 830px
+	height: 100%
 	
 .home__text
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif
 	padding-top: 200px
-	margin: 0 auto 80px
-	width: 940px
+	margin: 0 auto
+	width: 50%
+	//width: 940px
 	img
 		position: relative
 		left: 50%
@@ -205,9 +214,8 @@ header
 		text-align: center 
 
 .home__pagination
-	position: absolute
-	left: 50%
-	margin-left: -28px 
+	text-align: center 
+	padding: 80px 0 240px 0
 	a
 		cursor: pointer
 		display: inline-block
@@ -245,25 +253,28 @@ header
 //SECTION BRANDS
 .brands
 	position: relative
-	height: 830px
+	height: 100% 
 
 .brands__text
 	font-family: "BrandonGrotesque-Regular", Arial, sans-serif	
 	text-align: center  
-	padding-top: 108px 
+	padding: 104px 0 
 	.title
 		color: #5bcce1
 		font-size: 48px
 	p
 		color: #555555
 		font-size: 24px    
-	table
-		width: 1000px
-		border: 0
+	.brands__table
+		width: 53%
 		margin: 0 auto
-		margin-top: 100px
-		td
-			padding-bottom: 100px  
+		margin-top: 100px 
+		.first__row
+			margin-bottom: 100px
+		.bl
+			display: inline-block
+			width: 16%
+			margin-bottom: 100px 
 		a
 			font-size: 18px
 			text-decoration: none 
@@ -271,6 +282,15 @@ header
 			color: #555
 			span
 				display: block 
+		+rt(1330)
+			.bl
+				width: 25%
+		+rt(875)
+			.bl
+				width: 40%
+		+rt(530)
+			.bl
+				width: 50%
 				
 .brands__scroll
 	a
@@ -282,7 +302,8 @@ header
 .account
 	position: relative
 	background: #5bcce1
-	height: 830px
+	//height: 830px
+	height: 100%
 	padding-bottom: 80px 
 	
 .account__text
@@ -339,11 +360,15 @@ header
 //FOR PAGE SEARCH PRODUCTS
 .searching
 	background: #5bcce1
-	height: 380px
+	height: 100%
+	padding-bottom: 100px 
 	.searching__products
-		width: 1000px
+		max-width: 1000px
 		margin: 0 auto
 		padding-top: 105px
+		+clr
+		+rt(1055)
+			padding-left: 20px 
 		.title
 			font: 48px "BrandonGrotesque-Regular", Arial, sans-serif	
 			color: #FFF
@@ -353,7 +378,7 @@ header
 	position: relative
 	padding-bottom: 20px 
 	input
-		width: 610px
+		width: 61%
 		height: 50px
 		margin-right: 16px 
 		padding-left: 50px
@@ -380,7 +405,13 @@ header
 				top: 16px
 				right: 30px
 				+s(arrow3)
-
+	+rt(1900)
+		input
+			margin-bottom: 20px 			
+	+rt(1270)
+		input
+			width: 270px
+			
 .searching__features
 	position: relative
 	float: left
@@ -430,6 +461,15 @@ header
 		position: absolute
 		top: 50px
 		right: 0
+	+rt(680)
+		font-size: 14px
+		.sort
+			top: 100px
+			left: 20px
+			padding-top: 15px 
+		button
+			i
+				top: 35px
 
 .result__prodsearch
 	margin-top: 80px
@@ -447,7 +487,11 @@ header
 			text-decoration: none 
 	.prinf
 		vertical-align: middle
-	 
+	+rt(880)
+		td
+			width: 10%
+			
+
 .result__pagination
 	text-align: right
 	margin-top: 30px
@@ -458,24 +502,30 @@ header
 			text-decoration: underline
 	.active
 		text-decoration: underline 		
+	+rt(1055)
+		padding-right: 20px 	
 		
 //FOR PAGE EXISTING CUSTOMER
 .checkout
 	background: #5bcce1
 	
 .checkout__text
-	width: 1000px 
+	max-width: 1000px 
 	margin: 0 auto
 	.title
 		font: 48px "BrandonGrotesque-Regular", Arial, sans-serif
 		color: #FFF
 		padding: 135px 0 70px 0
+	+rt(1055)
+		padding-left: 20px
 		
 .existing, .newcus
-	width: 1000px 	 
+	max-width: 1000px 	 
 	margin: 0 auto
 	padding: 60px 0
 	position: relative 
+	+rt(1055)
+		padding-left: 20px 
 
 .steps
 	color: #5bcce1
@@ -502,6 +552,8 @@ header
 			+s(arrow4)
 		&.active
 			opacity: 1 
+	+rt(830)
+		margin-top: 20px
 			
 .existing__options
 	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
@@ -515,6 +567,7 @@ header
 	color: #555
 	table
 		width: 35%  
+		min-width: 330px
 	.another
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
 		padding-left: 20px 
@@ -631,9 +684,10 @@ header
 .existing__billing
 	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 	color: #555 
+	padding-top: 50px 
 	.card
 		width: 30%
-		margin-top: 35px
+		min-width: 300px 
 		td
 			vertical-align: top
 			padding-bottom: 15px
@@ -656,6 +710,7 @@ header
 			text-decoration: none 
 	.payment
 		width: 45%
+		min-width: 350px
 		margin-top: 40px
 		.radio
 			input
@@ -688,6 +743,10 @@ header
 		margin-bottom: 45px
 	ul
 		margin-bottom: 30px 
+	+rt(670)
+		float: none
+		width: 100%
+		margin-bottom: 30px 
 		
 .existing__product
 	+clr
@@ -697,24 +756,43 @@ header
 		width: 15%
 		text-align: right
 		padding: 30px 0
-	.existing__first
-		td
-			padding: 0 
-			font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 	.product__name
 		width: 55% 
 		text-align: left
 		font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
+	+rt(970)
+		.product__name
+			width: auto 
+	+rt(558)
+		td, .product__name
+			width: 17%		
+			font-size: 15px
+				
+.existing__first
+	td
+		padding: 0 
+		font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
+	+rt(558)
+		td
+			font-size: 15px
 
 .existing__total
 	+clr
 	table
 		width: 35%
+		min-width: 300px
 		text-align: right
 		float: right
 		margin: 40px 0
 	.medium 
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+	+rt(760)
+		table
+			float: none
+			text-align: left	
+	+rt(558)
+		table
+			font-size: 15px 	
 
 .existing__buttons
 	border-top: 1px solid #ddd
@@ -744,7 +822,13 @@ header
 			+s(arrow4)
 		a
 			color: #5bcce1 
-			
+	+rt(680)
+		.complete
+			position: relative
+			display: inline-block
+			margin-top: 20px
+
+
 //FOR NEW CUSTOMER PAGE
 .newcus__shipping
 	padding: 45px 0 60px 0
@@ -752,18 +836,21 @@ header
 		font: 14px "BrandonGrotesque-Medium", Arial, sans-serif
 		color: #555 
 		line-height: 2 
+		display: inline-block
+	+rt(492)
+		span
+			padding: 0 0 15px 15px 
 
 .newcus__fieldset
-	.row
-		margin-bottom: 20px 
 	input
 		font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 		width: 300px
 		height: 50px
-		margin-right: 20px  
+		margin: 0 20px 20px 0  
 		padding-left: 20px
 		border: 1px solid #ddd
 		color: #555
+		display: inline-block 
 		+placeholder-color(#555)
 	.long
 		width: 644px	
@@ -775,13 +862,16 @@ header
 		right: 20px
 		+s(arrow5)
 		cursor: pointer
+	+rt(720)
+		.long
+			width: 300px	
 
 .dropdown
 	display: inline-block
 	position: relative
 	width: 320px
 	height: 50px
-	margin-right: 20px
+	margin: 0 20px 20px 0
 	select
 		opacity: 0
 		position: absolute  
@@ -796,11 +886,18 @@ header
 	background: #5bcce1 
 	height: 100px 
 	border-top: 1px solid #fff
+	+clr
+	+rt(1020)
+		height: auto
+		padding-bottom: 20px
 	.footer__social,
 	.footer__menu
 		float: left
 		margin-left: 35px
 		margin-top: 50px 
+		+rt(1020)
+			float: none
+			text-align: center 
 	.footer__menu
 		li 
 			float: left
@@ -809,11 +906,20 @@ header
 				text-decoration: none 
 			a
 				color: #FFF
+		+rt(650)
+			li
+				padding: 5px 0
+				float: none
+				
 	.footer__copyright
 		font: 13px "BrandonGrotesque-Medium", Arial, sans-serif 
 		float: right
 		margin: 45px 50px 0 0  
 		color: #FFF 
+		+rt(650)
+			float: none
+			margin: 45px 0 0 30px 
+			text-align: center 
 
 .footer__badges
 	height: 50px

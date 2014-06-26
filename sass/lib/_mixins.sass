@@ -30,6 +30,10 @@ $w480: 480px
 $w360: 360px
 $w320: 320px
 
+=rt($media)
+	@media only screen and (max-width: $media+px)
+		@content
+
 =r($media)
 	@if $media == w1280
 		@media only screen and (max-width: $w1280)
