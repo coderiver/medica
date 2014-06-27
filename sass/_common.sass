@@ -57,6 +57,7 @@ header, section, footer
 .out
 	position: relative
 	overflow: hidden
+	min-height: 100%
 	
 header
 	width: 100%	
@@ -108,16 +109,27 @@ header
 		background: none
 		font-size: 16px
 		border: 2px solid #fff
-		color: white
+		color: #fff
 		text-align: left
-		padding-left: 20px  
+		padding-left: 20px
+	a
+		font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
+		padding: 5px 10px 0 0
+		display: inline-block
+		color: #FFF
+		text-decoration: none 
 		+rt(480)
-			width: 190px
-			text-align: center
-			padding: 5px
-			font-size: 15px 
-		+r(w360)
-			display: none
+			font-size: 15px
+			padding: 5px 8px 0 0  
+	+rt(480)
+		width: 190px
+		text-align: center
+		padding: 5px
+		font-size: 15px 
+	+r(w360)
+		display: none 
+	
+	
 	.auth__menu
 		+s(menu_i)
 		position: absolute
@@ -136,6 +148,7 @@ header
 	background: #fff
 	position: absolute
 	width: 380px
+	max-width: 40%
 	height: 98.5%
 	z-index: 5
 	top: 0
@@ -512,14 +525,27 @@ header
 .checkout__text
 	max-width: 1000px 
 	margin: 0 auto
+	&.sign
+		max-width: 830px 
 	.title
 		font: 48px "BrandonGrotesque-Regular", Arial, sans-serif
 		color: #FFF
-		padding: 135px 0 70px 0
+		padding: 135px 0 70px 0		
+	span
+		font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
+		color: #b9f4ff 
+		margin-left: 35px
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: 5px
+			left: -17px
+			+s(lock)
 	+rt(1055)
 		padding-left: 20px
 		
-.existing, .newcus
+.existing, .newcus, .shopping
 	max-width: 1000px 	 
 	margin: 0 auto
 	padding: 60px 0
@@ -598,6 +624,54 @@ header
 		&:hover
 			text-decoration: none  
 
+//FOR PAGE SHOPPING LOGIN
+.shopping
+	max-width: 830px
+	+clr
+	+rt(690)
+		max-width: 250px
+	
+.customer, .or
+	width: 38.55421%
+	min-width: 250px
+	float: left
+	font-family: "BrandonGrotesque-Regular", Arial, sans-serif
+	color: #555 
+	+rt(690)
+		float: none
+
+.customer
+	+clr
+	.ttl
+		padding-bottom: 50px 
+		font-size: 24px 
+	.cus, .frgt
+		font: 14px "BrandonGrotesque-Medium", Arial, sans-serif
+		line-height: 2
+	.frgt
+		float: right
+		color: #5bcce1 
+	button
+		width: 100%
+		height: 50px
+		background: #5bcce1   
+		color: #fff 
+		text-transform: uppercase		
+		margin-top: 30px	 
+	form
+		input
+			width: 100%
+			margin-right: 0
+			+box
+
+.or
+	width: 22.89156% 
+	min-width: 10%
+	text-align: center 
+	margin: 95px auto
+	font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
+
+		
 //CHECKBOX AND RADIOBUTTON MODIFICATION
 .checkbox
 	display: inline-block
@@ -841,7 +915,7 @@ header
 		span
 			padding: 0 0 15px 15px 
 
-.newcus__fieldset
+.newcus__fieldset, .customer
 	input
 		font: 18px "BrandonGrotesque-Regular", Arial, sans-serif
 		width: 300px
