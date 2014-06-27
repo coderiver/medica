@@ -49,6 +49,7 @@ body
 +font(BrandonGrotesque-Black, BrandonGrotesque-Black)
 +font(BrandonGrotesque-Regular, BrandonGrotesque-Regular)
 +font(BrandonGrotesque-Bold, BrandonGrotesque-Bold)
++font(BrandonGrotesque-RegularItalic, BrandonGrotesque-RegularItalic)
 
 header, section, footer
 	//min-width: 1115px
@@ -112,6 +113,13 @@ header
 		color: #fff
 		text-align: left
 		padding-left: 20px
+		+rt(480)
+			width: 190px
+			text-align: center
+			padding: 5px
+			font-size: 15px 
+		+r(w475)
+			display: none 
 	a
 		font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
 		padding: 5px 10px 0 0
@@ -121,12 +129,6 @@ header
 		+rt(480)
 			font-size: 15px
 			padding: 5px 8px 0 0  
-	+rt(480)
-		button
-			width: 190px
-			text-align: center
-			padding: 5px
-			font-size: 15px 
 	+r(w360)
 		display: none 
 	
@@ -798,6 +800,11 @@ header
 				top: 8px
 		a
 			text-decoration: none 
+	&.cart
+		padding-top: 0 
+		.title
+			font-size: 24px 
+			padding-bottom: 60px 
 
 .existing__checkbox
 	margin-top: 40px
@@ -831,6 +838,11 @@ header
 		width: 15%
 		text-align: right
 		padding: 30px 0
+	.frame
+		border: 1px solid #ddd
+		width: 40px
+		display: inline-block
+		padding-right: 10px
 	.product__name
 		width: 55% 
 		text-align: left
@@ -842,6 +854,9 @@ header
 		td, .product__name
 			width: 17%		
 			font-size: 15px
+	&.cart
+		.product__name
+			width: 32%			
 				
 .existing__first
 	td
@@ -861,6 +876,8 @@ header
 		margin: 40px 0
 	.medium 
 		font-family: "BrandonGrotesque-Medium", Arial, sans-serif
+	.italic
+		font: 14px "BrandonGrotesque-RegularItalic", Arial, sans-serif
 	+rt(760)
 		table
 			float: none
@@ -956,6 +973,27 @@ header
 		-webkit-appearance: none  
 		color: #555		
 		cursor: pointer
+		
+//CART PAGE
+.related
+	margin-top: 60px
+	p
+		font-size: 30px	
+		margin-bottom: 25px
+		color: #5bcce1
+		
+.recommended
+	display: inline-block
+	margin-right: 20px 
+	a
+		text-decoration: none 
+	span
+		display: block
+	.acid
+		color: #555 
+	+rt(560)
+		margin-bottom: 20px 
+
 //FOOTER	
 .footer__common
 	background: #5bcce1 
