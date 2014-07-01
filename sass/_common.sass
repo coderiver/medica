@@ -131,8 +131,6 @@ header
 			padding: 5px 8px 0 0  
 	+r(w360)
 		display: none 
-	
-	
 	.auth__menu
 		+s(menu_i)
 		position: absolute
@@ -740,8 +738,6 @@ header
 		position: absolute
 		left: 0
 		top: 8px
-		width: 11px
-		height: 11px
 		+s(radio) 
 	&:after
 		content: ""
@@ -989,10 +985,114 @@ header
 		text-decoration: none 
 	span
 		display: block
+		color: #5bcce1
 	.acid
 		color: #555 
 	+rt(560)
 		margin-bottom: 20px 
+
+//PRODUCT INFO PAGE
+.prinfo
+	max-width: 1010px 
+	+clr
+	
+.prinfo__left, .prinfo__right
+	float: left
+
+.prinfo__left
+	min-width: 272px
+	width: 31.6831%
+	overflow: hidden 
+	margin-right: 20px 
+	
+.prinfo__right
+	width: 66.3366%
+	font: 18px "BrandonGrotesque-Regular", Arial, sans-serif 
+	color: #555 
+	.related
+		margin-top: 50px 
+
+.prinfo__title, .prinfo__presc
+	+clr
+	margin-bottom: 80px 
+	.medium
+		font-family: "BrandonGrotesque-Medium", Arial, sans-serif 
+	.name
+		font-size: 30px 
+		display: inline-block 
+	.blue
+		color: #5bc7de
+	.smaller
+		font-size: 24px 
+		display: block 
+	button
+		width: 222px 
+		height: 50px 
+		float: right
+		color: #fff
+		background: #5bcce1   
+		text-transform: uppercase 
+		font-family: "BrandonGrotesque-Black", Arial, sans-serif 
+		+rt(900)
+			float: none
+			margin-top: 20px
+
+.prinfo__presc
+	margin-bottom: 60px
+	td
+		vertical-align: top
+		+rt(715)
+			width: 5%
+		+rt(680)
+			padding-right: 10px 	
+	img
+		margin-right: 10px 	
+	span
+		display: block
+	+rt(875)
+		font-size: 15px 
+		
+.prinfo__quan
+	font: 16px "BrandonGrotesque-Medium", Arial, sans-serif 
+	text-align: center
+	.inrow
+		display: inline-block
+		vertical-align: top
+		padding-bottom: 60px 
+	.quantity, .price	
+		width: 105px
+		height: 50px  
+		span
+			display: table-cell
+			vertical-align: middle  			
+			width: 105px
+			height: 50px 
+	.quantity
+		background: #5bcce1
+		color: #fff 
+	.price
+		background: #dcf9ff 
+		color: #5bcce1 
+	input
+		top: 20px
+		left: -3px
+	.radio__title
+		&:before,
+		&:after
+			top: 20px
+			left: -3px
+		
+
+.prinfo__text
+	.about
+		color: #5BCCE1
+		font-size: 24px
+	.read
+		color: #5BCCE1
+		cursor: pointer 
+		text-decoration: underline 
+	.more
+		display: none 
 
 //FOOTER	
 .footer__common

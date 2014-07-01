@@ -14,4 +14,9 @@ head.ready(function() {
 	$('.close').click(function(event) {
 		$('.header__sidebar').removeClass('is-active');
 	});
+
+	$('.prinfo__text .read').click(function(event) {
+		$('.more').slideDown();
+		$('.prinfo__text .read').hide();
+	});
 });
