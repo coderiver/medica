@@ -57,14 +57,13 @@ header, section, footer
 //HEADER
 .out
 	position: relative
-	overflow: hidden
-	min-height: 100%
-	
+	//height: 100%
+		
 header
 	width: 100%	
 	height: 70px	
 	position: fixed
-	z-index: 3
+	z-index: 1000
 	background: #5bcce1
 	border-bottom: 2px solid #54bdd0
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif 
@@ -113,12 +112,12 @@ header
 		color: #fff
 		text-align: left
 		padding-left: 20px
-		+rt(480)
-			width: 190px
+		+rt(490)
+			width: 160px
 			text-align: center
 			padding: 5px
-			font-size: 15px 
-		+r(w475)
+			font-size: 12px 
+		+r(w480)
 			display: none 
 	a
 		font: 18px "BrandonGrotesque-Medium", Arial, sans-serif
@@ -151,13 +150,12 @@ header
 	width: 380px
 	max-width: 50%
 	height: 98.5%
-	z-index: 5
+	z-index: 2000
 	top: 0
-	right: -380px
+	right: 0
 	box-shadow: 0px 5px 3px #d9d9d9
+	display: none
 	+tr(all 0.3s linear)
-	&.is-active
-		right: 0
 	li
 		border-bottom: 1px solid #ade5f0 
 		padding: 25px 0 19px 30px
@@ -208,16 +206,15 @@ header
 	position: relative
 	background: url(../img/bg.jpg) 50% 0% no-repeat
 	background-size: cover
-	//height: 830px
-	height: 100%
+	+box
 	
 .home__text
 	font-family: "BrandonGrotesque-Medium", Arial, sans-serif
-	padding-top: 200px
 	margin: 0 auto
 	width: 50%
 	//width: 940px
 	img
+		margin-top: 200px
 		position: relative
 		left: 50%
 		bottom: 45px
@@ -267,7 +264,6 @@ header
 //SECTION BRANDS
 .brands
 	position: relative
-	height: 100% 
 
 .brands__text
 	font-family: "BrandonGrotesque-Regular", Arial, sans-serif	
@@ -317,7 +313,6 @@ header
 	position: relative
 	background: #5bcce1
 	//height: 830px
-	height: 100%
 	padding-bottom: 80px 
 	
 .account__text
@@ -374,7 +369,6 @@ header
 //FOR PAGE SEARCH PRODUCTS
 .searching
 	background: #5bcce1
-	height: 100%
 	padding-bottom: 100px 
 	.searching__products
 		max-width: 1000px

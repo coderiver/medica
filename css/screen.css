@@ -31,9 +31,9 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
 @font-face { font-family: BrandonGrotesque-RegularItalic; src: url("fonts/BrandonGrotesque-RegularItalic.eot"); src: url("fonts/BrandonGrotesque-RegularItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BrandonGrotesque-RegularItalic.woff") format("woff"), url("fonts/BrandonGrotesque-RegularItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-.out { position: relative; overflow: hidden; min-height: 100%; }
+.out { position: relative; }
 
-header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5bcce1; border-bottom: 2px solid #54bdd0; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
+header { width: 100%; height: 70px; position: fixed; z-index: 1000; background: #5bcce1; border-bottom: 2px solid #54bdd0; font-family: "BrandonGrotesque-Medium", Arial, sans-serif; }
 
 .header__left, .header__logo, .header__right, .header__phone { position: absolute; }
 
@@ -50,15 +50,15 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .header__right { right: 90px; top: 17px; }
 
 .header__auth button { width: 233px; height: 37px; background: none; font-size: 16px; border: 2px solid white; color: white; text-align: left; padding-left: 20px; }
-@media only screen and (max-width: 480px) { .header__auth button { width: 190px; text-align: center; padding: 5px; font-size: 15px; } }
+@media only screen and (max-width: 490px) { .header__auth button { width: 160px; text-align: center; padding: 5px; font-size: 12px; } }
+@media only screen and (max-width: 480px) { .header__auth button { display: none; } }
 .header__auth a { font: 18px "BrandonGrotesque-Medium", Arial, sans-serif; padding: 5px 10px 0 0; display: inline-block; color: white; text-decoration: none; }
 @media only screen and (max-width: 480px) { .header__auth a { font-size: 15px; padding: 5px 8px 0 0; } }
 @media only screen and (max-width: 360px) { .header__auth { display: none; } }
 .header__auth .auth__menu { background: url('../img/icons-s47fa40b10b.png') 0 -355px no-repeat; width: 26px; height: 15px; position: absolute; top: 11px; right: -40px; cursor: pointer; }
 .header__auth .search { background: url('../img/icons-s47fa40b10b.png') 0 -51px no-repeat; width: 19px; height: 20px; position: absolute; top: 9px; right: -73px; cursor: pointer; }
 
-.header__sidebar { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; background: white; position: absolute; width: 380px; max-width: 50%; height: 98.5%; z-index: 5; top: 0; right: -380px; box-shadow: 0px 5px 3px #d9d9d9; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear; }
-.header__sidebar.is-active { right: 0; }
+.header__sidebar { font: 18px "BrandonGrotesque-Regular", Arial, sans-serif; background: white; position: absolute; width: 380px; max-width: 50%; height: 98.5%; z-index: 2000; top: 0; right: 0; box-shadow: 0px 5px 3px #d9d9d9; display: none; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear; }
 .header__sidebar li { border-bottom: 1px solid #ade5f0; padding: 25px 0 19px 30px; }
 .header__sidebar li:hover a { color: #5bcce1; }
 .header__sidebar li a { text-decoration: none; color: #555555; display: inherit; }
@@ -74,10 +74,10 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .header__search a:last-child { margin-right: 0; }
 .header__search a:hover { text-decoration: underline; }
 
-.home { position: relative; background: url(../img/bg.jpg) 50% 0% no-repeat; background-size: cover; height: 100%; }
+.home { position: relative; background: url(../img/bg.jpg) 50% 0% no-repeat; background-size: cover; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; padding-top: 200px; margin: 0 auto; width: 50%; }
-.home__text img { position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
+.home__text { font-family: "BrandonGrotesque-Medium", Arial, sans-serif; margin: 0 auto; width: 50%; }
+.home__text img { margin-top: 200px; position: relative; left: 50%; bottom: 45px; margin-left: -69px; }
 .home__text p { font-size: 36px; color: white; text-align: center; }
 
 .home__pagination { text-align: center; padding: 80px 0 240px 0; }
@@ -90,7 +90,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .home__scroll a, .brands__scroll a { font: 14px "BrandonGrotesque-Black", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: white; bottom: 50px; }
 .home__scroll a:after, .brands__scroll a:after { content: ""; position: absolute; top: 30px; left: 50%; margin: 0 0 0 -7px; background: url('../img/icons-s47fa40b10b.png') 0 -312px no-repeat; width: 14px; height: 9px; }
 
-.brands { position: relative; height: 100%; }
+.brands { position: relative; }
 
 .brands__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding: 104px 0; }
 .brands__text .title { color: #5bcce1; font-size: 48px; }
@@ -107,7 +107,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .brands__scroll a { color: #5bcce1; }
 .brands__scroll a:after { background: url('../img/icons-s47fa40b10b.png') 0 -195px no-repeat; width: 14px; height: 9px; }
 
-.account { position: relative; background: #5bcce1; height: 100%; padding-bottom: 80px; }
+.account { position: relative; background: #5bcce1; padding-bottom: 80px; }
 
 .account__text { font-family: "BrandonGrotesque-Regular", Arial, sans-serif; text-align: center; padding-top: 108px; color: white; }
 .account__text .title { font-size: 48px; }
@@ -127,7 +127,7 @@ header { width: 100%; height: 70px; position: fixed; z-index: 3; background: #5b
 .welcome__text .ps { font-size: 18px; margin-top: 50px; }
 .welcome__text a { color: white; }
 
-.searching { background: #5bcce1; height: 100%; padding-bottom: 100px; }
+.searching { background: #5bcce1; padding-bottom: 100px; }
 .searching .searching__products { max-width: 1000px; margin: 0 auto; padding-top: 105px; *zoom: 1; }
 .searching .searching__products:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1055px) { .searching .searching__products { padding-left: 20px; } }
